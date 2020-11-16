@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand pl-2 font-weight-bold" href="{% url 'home' %}">Navbar</a>
+      <span class="ml-5">
+        <a href="{% url 'home' %}" class="mr-2">Home</a>
+        <a href="{% url 'about' %}" class="">About</a>
+      </span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'post-new' %}">New Post</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link text-capitalize" href="{% url 'profile' %}">{{user.username}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+            
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="{% url 'register' %}">Register</a>
+          </li>
+
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

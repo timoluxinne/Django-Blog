@@ -1,0 +1,35 @@
+body{
+    background: #f3f3f3;
+}
+
+nav{
+    background: rgb(202, 24, 24);
+}
+
+
+.container{
+    padding: 0 10%;
+}
+
+.col{
+    background: white;
+    border-radius: .29rem;
+    padding: 5px;
+    margin-bottom: 7px;
+    box-shadow: 0px 3px 6px rgb(192, 192, 192);
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(26, 179, 206);
+}
+nav a{
+    color: rgb(255, 255, 255);
+}
+h2>a{
+    color: black;
+}
+img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}

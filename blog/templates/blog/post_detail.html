@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+{% block content %}
+        <article class="col d-flex">
+            <img src="{{object.author.profile.image.url}}" alt="">
+            <div class="ml-2 w-100 ">    
+                <span><a href="" class="text-capitalize"><strong>{{object.author}}</strong></a></span>
+                <span class="text-muted small ml-3">{{object.date_added}}</span>
+                <div>
+                    <a href="{% url 'post-update' object.id %}" class="btn btn-info btn-sm">Update</a>
+                    <a href="{% url 'post-delete' object.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+                <hr class="my-1">
+                <h2>{{object.title}}</h2>
+                <p>{{object.content}}</p>
+            </div>
+        </article>
+{% endblock content %}

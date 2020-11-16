@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="col">
+      <form action="" method="POST">
+          {% csrf_token %}
+          <fieldset>
+              <legend class="text-center border-bottom">Post</legend>
+              {{form|crispy}}
+          </fieldset>
+          <button class="btn btn-block btn-info my-2">Post</button>
+      </form>
+      <a href="{% url 'home' %}" class="btn btn-block btn-outline-secondary">Cancel</a>
+  </div>
+{% endblock content %}
